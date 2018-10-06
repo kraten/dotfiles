@@ -178,7 +178,7 @@ ramp-volume-2 = 
 type = internal/mpd
 
 label-offline = mpd is offline
-format-online = <icon-prev> <toggle> <icon-next> <label-song>
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
 format-offline = <label-offline>
 host = 127.0.0.1
 port = 6600
@@ -261,7 +261,9 @@ menu-0-0 = " shutdown "
 menu-0-0-exec = shutdown now
 menu-0-1 = " restart "
 menu-0-1-exec = shutdown -r now
-menu-0-2 =   cancel
+menu-0-2 = " suspend "
+menu-0-2-exec = systemctl suspend
+menu-0-3 =   cancel
 
 label-open = 
 label-close =
