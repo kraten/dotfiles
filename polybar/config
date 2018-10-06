@@ -1,4 +1,143 @@
 [bar/white]
+  
+;------------;
+; DIMENSIONS ;
+;------------;
+
+width = 100%
+height = 20
+offset-y = 0
+offset-x = 0
+
+
+border-top-size = 5
+border-bottom-size = 5
+border-right-size = 10
+border-left-size = 10
+
+;----------;
+; LOCATION ;
+;----------;
+
+; LOCATION ;
+;----------;
+
+bottom = false
+monitor = eDP-1
+;wm-restack = none
+;override-redirect = false
+
+;-------;
+; FONTS ;
+;-------;
+
+font-0 = "Hack:style:Bold:size=11;3"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
+font-0 = "Hack:style:Bold:size=11;3"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
+font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
+
+;--------;
+; COLORS ;
+;--------;
+
+background = 0
+foreground = #c5a9f9
+border-color = 0
+background = 0
+foreground = #c5a9f9
+border-color = 0
+ramp-capacity-4 = 
+
+[module/volume]
+type = internal/alsa
+
+format-volume = <ramp-volume> <label-volume>
+format-muted =  0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/mpd]
+type = internal/mpd
+
+label-offline = mpd is offline
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+format-volume = <ramp-volume> <label-volume>
+format-muted =  0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/mpd]
+type = internal/mpd
+
+label-offline = mpd is offline
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/mpd]
+type = internal/mpd
+
+label-offline = mpd is offline
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+format-volume = <ramp-volume> <label-volume>
+format-muted =  0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/mpd]
+type = internal/mpd
+
+label-offline = mpd is offline
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+format-volume = <ramp-volume> <label-volume>
+format-muted =  0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/mpd]
+type = internal/mpd
+
+label-offline = mpd is offline
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+exec-if =
+~/gitstore/dotfiles  master ✗                         
+» ls
+checkupdates  i3  polybar  README.md  screenshots
+~/gitstore/dotfiles  master ✗                         
+» git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   polybar/config
+
+no changes added to commit (use "git add" and/or "git commit -a")
+~/gitstore/dotfiles  master ✗                         
+» git add polybar/config 
+~/gitstore/dotfiles  master ✗                       ✚ 
+» cat polybar/config 
+[bar/white]
 
 ;------------;
 ; DIMENSIONS ;
@@ -178,7 +317,7 @@ ramp-volume-2 = 
 type = internal/mpd
 
 label-offline = mpd is offline
-format-online = <icon-prev> <toggle> <icon-next> <label-song>
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
 format-offline = <label-offline>
 host = 127.0.0.1
 port = 6600
@@ -261,7 +400,10 @@ menu-0-0 = " shutdown "
 menu-0-0-exec = shutdown now
 menu-0-1 = " restart "
 menu-0-1-exec = shutdown -r now
-menu-0-2 =   cancel
+menu-0-2 = " suspend "
+menu-0-2-exec = systemctl suspend
+menu-0-3 =   cancel
+
 
 label-open = 
 label-close =
@@ -273,3 +415,4 @@ inherit = bar/white
 background = #ffffff
 
 tray-position = center
+
